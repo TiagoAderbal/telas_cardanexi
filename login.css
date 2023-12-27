@@ -1,0 +1,144 @@
+:root {
+    --bg-color: #ff6300;
+    --white: #fff;
+}
+
+body {
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+button,
+input,
+a {
+    outline-width: 0px;
+}
+
+.bi-fingerprint {
+    font-size: 2.5rem;
+    color: #666666;
+    background-color: #191919;
+    padding: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #4c4c4c;
+}
+
+.right {
+    height: 80vh;
+    width: 50rem;
+    padding: 0;
+    margin-top: 5rem;
+    background-color: #0c0c0c;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+}
+
+p,
+label {
+    font-size: 1rem;
+    color: #4c4c4c;
+}
+
+.txts-pass {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#email,
+#password {
+    border-radius: 5px;
+    background-color: #191919;
+    color: #4c4c4c;
+    border-style: none;
+    padding: 0.4rem;
+}
+
+.pass {
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+#button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-style: none;
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--white);
+    padding: 0.5rem;
+    transition: all 0.35s;
+}
+
+.google-but {
+    border-style: none;
+    border-radius: 5px;
+    background: #191919;
+    color: #666666;
+    padding: 0.5rem;
+    transition: all 0.35s;
+    width: 80%;
+}
+
+.account {
+    margin-top: 3.6rem;
+    font-size: 1.1rem;
+}
+
+.link-reg {
+    text-decoration: none;
+    color: var(--bg-color);
+    /* font-weight: bold; */
+}
+
+#button:hover,
+.but-register:hover {
+    background-color: var(--bg-color);
+    color: var(--white);
+    transition: all 0.35s;
+}
+
+.titleWelcome {
+    font-weight: bold;
+}
+
+.img-foot {
+    width: 9rem;
+}
+
+@media (max-width: 860px) {
+    .right {
+        height: 80vh;
+        width: 80vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .right {
+        margin-top: 2rem !important;
+        height: 90vh;
+        width: 80vw;
+    }
+}

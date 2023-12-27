@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="./img/fav.png" />
+        <link rel="apple-touch-icon" href="./img/fav.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <meta name="description" content="Seu restaurante automatizado e seu tempo de espera reduzido." />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Cardanexi" />
+        <meta property="og:description" content="Seu restaurante automatizado e seu tempo de espera reduzido." />
+        <meta property="og:site_name" content="Cardanexi" />
+        <!-- CDN Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" type="text/css" href="./login.css" media="screen" />
+        <!-- FONTES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <title>Cardanexi</title>
+    </head>
+
+    <body>
+        <div class="right" id="login">
+            <i class="bi bi-fingerprint"></i>
+            <h2 class="pt-4"><b>Seja bem-vindo</b></h2>
+            <p>Entre com sua conta e acesse nossa plataforma.</p>
+            <form method="POST" class="form">
+                <label class="txts-pass" for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="off" required></input><br>
+
+                <div class="txts-pass">
+                    <label for="password">Senha</label>
+                    <a class="pass" href="#">Esqueceu sua senha?</a>
+                </div>
+                <input type="password" id="password" name="password" autocomplete="off" required></input><br>
+
+                <input type="submit" id="button" name="button" value="Iniciar sessão"></input>
+            </form>
+            <button class="bi bi-google google-but" type="button"> Entrar com Google</button>
+            <p class="account">Ainda não tem uma conta? <a href="#" class="link-reg">Registre-se</a></p>
+            <img class="img-foot" src="./img/logo-re.png"></img>
+        </div>
+
+        <!-- <div class="col-lg-6 right register" id="register">
+                    <h2>Seja bem-vindo</h2>
+                    <p>Informe seus dados e crie seu login</p>
+                    <form method="POST" class="form">
+                        <label for="name">Nome</label>
+                        <input type="name" id="name" name="name" autocomplete="off" required></input><br>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="off" required></input><br>
+
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" autocomplete="off" required></input><br>
+
+                        <label for="password-confirmation">Confirmar Senha:</label>
+                        <input type="password" id="password-confirmation" name="password-confirmation" required>
+
+                        <input type="submit" id="button" name="button" value="Criar cadastro"></input>
+                    </form>
+                    <h5>já tem uma conta?</h5>
+                    <button class="but-register" type="button" onclick="showLogin()">Faça login aqui</button>
+                </div> -->
+    </body>
+    <!-- cdn bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</html>
