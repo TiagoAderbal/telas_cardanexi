@@ -22,20 +22,10 @@ a {
     outline-width: 0px;
 }
 
-.bi-fingerprint {
-    font-size: 2.5rem;
-    color: #666666;
-    background-color: #191919;
-    padding: 5px;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #4c4c4c;
-}
-
 .right {
-    height: 80vh;
-    width: 50rem;
-    padding: 0;
+    height: 85vh;
+    width: 40rem;
+    padding-top: 3rem;
     margin-top: 5rem;
     background-color: #171717;
     color: var(--white);
@@ -47,85 +37,65 @@ a {
     border-style: solid;
     border-width: 0.1px;
     border-color: #4c4c4c;
-
 }
 
 .form {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 80%;
+    width: 65%;
 }
 
-p,
-label {
+p {
     font-size: 1rem;
     color: #696969;
 }
 
-.txts-pass {
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-    padding-bottom: 0.2rem;
-    display: flex;
-    justify-content: space-between;
-}
-
 #email,
-#password {
-    border-radius: 5px;
+#password, #name {
+    border-radius: 10px;
     background-color: #1e1e1e;
-    color: #4c4c4c;
+    color: #555;
     border-style: none;
-    padding: 0.4rem;
+    padding: 1rem;
 }
 
-.pass {
-    text-decoration: none;
-    color: var(--bg-color);
-}
+::-webkit-input-placeholder {
+    color: #555;
+ }
+ 
+ :-moz-placeholder {
+    color: #555;
+ }
+ 
+ ::-moz-placeholder {
+    color: #555;
+ }
+ 
+ :-ms-input-placeholder {  
+    color: #555;
+ }
 
 #button {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.2rem;
     border-style: none;
     border-radius: 5px;
     background: var(--bg-color);
     color: var(--white);
-    padding: 0.5rem;
+    padding: 0.2rem;
     transition: all 0.35s;
 }
 
-.google-but {
-    border-style: none;
-    border-radius: 5px;
-    background: #1e1e1e;
-    color: #666666;
-    padding: 0.5rem;
-    transition: all 0.35s;
-    width: 80%;
-}
-
-.account {
-    margin-top: 3.6rem;
+.login {
+    margin-top: 1rem;
     font-size: 1.1rem;
+    color: #4b4b4b !important;
 }
 
 .link-reg {
     text-decoration: none;
     color: var(--bg-color);
     /* font-weight: bold; */
-}
-
-#button:hover,
-.but-register:hover {
-    background-color: var(--bg-color);
-    color: var(--white);
-    transition: all 0.35s;
-}
-
-.titleWelcome {
-    font-weight: bold;
 }
 
 .img-foot {
