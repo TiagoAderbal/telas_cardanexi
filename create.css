@@ -105,22 +105,38 @@ input {
 ::-webkit-input-placeholder {
     color: #555;
     font-size: 0.9rem;
- }
- 
- :-moz-placeholder {
+}
+
+:-moz-placeholder {
     color: #555;
     font-size: 0.9rem;
- }
- 
- ::-moz-placeholder {
+}
+
+::-moz-placeholder {
     color: #555;
     font-size: 0.9rem;
- }
- 
- :-ms-input-placeholder {  
+}
+
+:-ms-input-placeholder {
     color: #555;
     font-size: 0.9rem;
- }
+}
+
+.whats {
+    bottom: 2rem;
+    right: 2rem;
+    position: fixed;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.whats img {
+    width: 4rem;
+}
 
 @media (max-width: 860px) {
     .right {
