@@ -21,7 +21,8 @@ body {
 
 button,
 input,
-a {
+a,
+select {
     outline-width: 0px;
 }
 
@@ -100,6 +101,34 @@ input {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     color: #868686;
+}
+
+.docs {
+    position: relative;
+}
+
+#tipoDocumento {
+    width: 5rem;
+    height: 3.4rem;
+    border-radius: 0.625rem;
+    background: #1E1E1E;
+    border: none;
+    color: #868686;
+    padding-left: 0.3rem;
+    border: 0.2px solid #868686;
+    position: absolute;
+    z-index: 2;
+}
+
+.docs input {
+    width: 26rem;
+    z-index: 1;
+    padding-left: 5.8rem;
+}
+
+.docs select option::content {
+    background-color: var(--bg-color);
+    color: var(--white);
 }
 
 ::-webkit-input-placeholder {

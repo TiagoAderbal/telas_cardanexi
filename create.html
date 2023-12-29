@@ -43,10 +43,24 @@
             </div>
             <form method="post" class="form">
                 <label for="name">Nome do Restaurante</label>
-                <input type="text" id="name" name="name" autocomplete="off" required placeholder="Digite o nome do restaurante"></input><br>
+                <input type="text" id="name" name="name" autocomplete="off" required
+                    placeholder="Digite o nome do restaurante"></input><br>
 
                 <label for="email">Email comercial</label>
-                <input type="text" id="email" name="email" autocomplete="off" required placeholder="contato@empresa.com.br"></input><br>
+                <input type="text" id="email" name="email" autocomplete="off" required
+                    placeholder="contato@empresa.com.br"></input><br>
+
+                <label for="document">Tipo de documento</label>
+
+                <div class="docs">
+                    <select id="tipoDocumento" name="tipoDocumento">
+                        <option value="CPF">CPF</option>
+                        <option value="CNPJ">CNPJ</option>
+                    </select>
+                    <input type="text" id="document" name="document" autocomplete="off" required
+                        placeholder="Insira o documento do seu restaurante">
+                    </input><br>
+                </div>
             </form>
         </div>
         <a href="https://wa.me/5514998761501?text=Ol%C3%A1%2C+seja+bem+vindo%21" target="blank" class="whats">
@@ -63,5 +77,63 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+
+    <script>
+
+        document.getElementById('tipoDocumento').addEventListener('change', function () {
+            // Limpa o campo de entrada quando o tipo de documento é alterado
+            document.getElementById('document').value = '';
+        });
+
+        document.getElementById('document').addEventListener('input', function () {
+            var tipoDocumento = document.getElementById('tipoDocumento').value;
+            var value = this.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            var formattedValue = '';
+
+            if (tipoDocumento === 'CPF') {
+                if (value.length > 3) {
+                    formattedValue += value.substring(0, 3) + '.';
+                    if (value.length > 6) {
+                        formattedValue += value.substring(3, 6) + '.';
+                        if (value.length > 9) {
+                            formattedValue += value.substring(6, 9) + '-';
+                            formattedValue += value.substring(9, 11);
+                        } else {
+                            formattedValue += value.substring(6);
+                        }
+                    } else {
+                        formattedValue += value.substring(3);
+                    }
+                } else {
+                    formattedValue = value;
+                }
+            } else if (tipoDocumento === 'CNPJ') {
+                if (value.length > 2) {
+                    formattedValue += value.substring(0, 2) + '.';
+                    if (value.length > 5) {
+                        formattedValue += value.substring(2, 5) + '.';
+                        if (value.length > 8) {
+                            formattedValue += value.substring(5, 8) + '/';
+                            if (value.length > 12) {
+                                formattedValue += value.substring(8, 12) + '-';
+                                formattedValue += value.substring(12, 14);
+                            } else {
+                                formattedValue += value.substring(8);
+                            }
+                        } else {
+                            formattedValue += value.substring(5);
+                        }
+                    } else {
+                        formattedValue += value.substring(2);
+                    }
+                } else {
+                    formattedValue = value;
+                }
+            }
+
+            this.value = formattedValue;
+        });
+
+    </script>
 
 </html>
