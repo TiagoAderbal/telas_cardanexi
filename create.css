@@ -43,7 +43,7 @@ p {
 }
 
 .rest {
-    margin-top: 9.5rem;
+    margin-top: 3rem;
     margin-bottom: 2.25rem;
     background-color: #1e1e1e;
     border-radius: 0.625rem;
@@ -105,6 +105,7 @@ input {
 
 .docs {
     position: relative;
+    margin-bottom: 1.6rem;
 }
 
 #tipoDocumento {
@@ -115,7 +116,7 @@ input {
     border: none;
     color: #868686;
     padding-left: 0.3rem;
-    border: 0.2px solid #868686;
+    border: 0.45px solid #696969;
     position: absolute;
     z-index: 2;
 }
@@ -126,9 +127,59 @@ input {
     padding-left: 5.8rem;
 }
 
-.docs select option::content {
-    background-color: var(--bg-color);
-    color: var(--white);
+/* Estilo para a caixa de entrada */
+.select2-selection--multiple {
+    width: 26rem !important;
+    /* height: 6rem !important; */
+    border-radius: 0.625rem !important;
+    background: #1E1E1E !important;
+    border: none !important;
+    padding-left: 0.8rem;
+}
+
+/* Estilo para os itens selecionados */
+.select2-selection__choice {
+    background-color: var(--bg-color) !important;
+    color: #fff !important;
+    border-radius: 0.625rem !important;
+    margin-bottom: 0 !important;
+}
+
+/* Estilo para o campo de pesquisa */
+.select2-search__field {
+    width: 100% !important;
+    border: none !important;
+    height: 3.6rem !important;
+    width: 20rem !important;
+}
+
+/* Estilo para o dropdown */
+.select2-dropdown {
+    background-color: #1E1E1E !important;
+    border: none !important;
+    border-radius: 0.625rem !important;
+    padding: 0.3rem 0.6rem !important;
+    margin: 0.3rem 0 !important;
+    color: #fff;
+}
+
+/* Estilo para o item sobre o qual o mouse está passando */
+.select2-results__option--highlighted, .select2-results__option--highlighted[aria-selected="true"] {
+    background-color: var(--bg-color) !important;
+    /* Cor de fundo quando destacado */
+    color: #fff !important;
+    /* Cor do texto quando destacado */
+    border-radius: 0.625rem !important;
+    margin-left: 0.3rem !important;
+    margin-right: 0.3rem !important;
+}
+
+.select2-results__option[aria-selected="true"] {
+    background-color: red;
+    color: #1E1E1E;
+    border-radius: 0.625rem !important;
+    margin-left: 0.3rem !important;
+    margin-right: 0.3rem !important;
 }
 
 ::-webkit-input-placeholder {

@@ -28,6 +28,10 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Cardanexi</title>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     </head>
 
     <body>
@@ -50,8 +54,7 @@
                 <input type="text" id="email" name="email" autocomplete="off" required
                     placeholder="contato@empresa.com.br"></input><br>
 
-                <label for="document">Tipo de documento</label>
-
+                <label for="tipoDocumento">Tipo de documento</label>
                 <div class="docs">
                     <select id="tipoDocumento" name="tipoDocumento">
                         <option value="CPF">CPF</option>
@@ -61,6 +64,13 @@
                         placeholder="Insira o documento do seu restaurante">
                     </input><br>
                 </div>
+
+                <label for="tipoEstab">Tipo de restaurante:</label>
+                <select class="tipoEstab" id="tipoEstab" multiple="multiple">
+                    <option value="pizzaria">Pizzaria</option>
+                    <option value="lanchonete">Lanchonete</option>
+                    <option value="esfiharia">Esfiharia</option>
+                </select>
             </form>
         </div>
         <a href="https://wa.me/5514998761501?text=Ol%C3%A1%2C+seja+bem+vindo%21" target="blank" class="whats">
@@ -134,6 +144,30 @@
             this.value = formattedValue;
         });
 
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Inicializa o Select2
+            $('#tipoEstab').select2({
+                tags: true,
+                tokenSeparators: [',', ' '],
+                width: '100%',
+                placeholder: 'Pesquisar tipos de estabelecimentos...'
+            });
+
+            // Adiciona um ouvinte de evento para o evento 'change'
+            $('#tiposEstab').on('change', function () {
+                // Verifica se há algum item selecionado
+                if ($(this).val() && $(this).val().length > 0) {
+                    // Ajusta o tamanho para 6rem
+                    $('.select2-selection--multiple').css('height', '6rem');
+                } else {
+                    // Nenhum item selecionado, ajusta o tamanho para 3.6rem
+                    $('.select2-selection--multiple').css('height', '3.6rem');
+                }
+            });
+        });
     </script>
 
 </html>
